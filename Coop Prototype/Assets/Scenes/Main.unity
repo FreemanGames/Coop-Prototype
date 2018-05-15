@@ -2102,7 +2102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   raycastMarker: {fileID: 0}
-  ammoCount: 0
+  ammoCount: 180
   clipSize: 18
   clipCount: 18
   noise: {fileID: 0}
@@ -2110,7 +2110,7 @@ MonoBehaviour:
   reloaded: 1
   ammoText: {fileID: 2078565016}
   clipText: {fileID: 538989791}
-  timeBetweenBullets: 0.7
+  timeBetweenBullets: 0.2
   damage: 22
   shootSound: {fileID: 8300000, guid: 3c55c1e1089373844ad4dfcbb85ebd03, type: 3}
   reloadSound: {fileID: 0}
@@ -2195,7 +2195,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -2219,7 +2219,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!114 &1801766752
 MonoBehaviour:
   m_ObjectHideFlags: 0
