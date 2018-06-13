@@ -111,10 +111,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab0870f009b469d48bf2464842073c29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TankMask:
+  m_ExplosionMask:
     serializedVersion: 2
-    m_Bits: 256
-  m_ExplosionParticles: {fileID: 19807510, guid: 37bbfe1d8df949f47b25f0baab0b1a4e,
+    m_Bits: 0
+  m_ExplosionParticles: {fileID: 198802894272003586, guid: 2e9f18c36f3df5e4a8eeb2689ca6328a,
     type: 2}
   m_ExplosionAudio: {fileID: 0}
   m_MaxDamage: 100

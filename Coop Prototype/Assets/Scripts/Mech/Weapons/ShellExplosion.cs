@@ -56,9 +56,10 @@ namespace Complete
             // Once the particles have finished, destroy the gameobject they are on.
             ParticleSystem.MainModule mainModule = m_ExplosionParticles.main;
             Destroy (m_ExplosionParticles.gameObject, mainModule.duration);
-
+            Debug.Log("destroy");
             // Destroy the shell.
             Destroy (gameObject);
+            Debug.Log("destroyed");
         }
 
 
@@ -78,8 +79,9 @@ namespace Complete
 
             // Make sure that the minimum damage is always 0.
             damage = Mathf.Max (0f, damage);
-
+            Debug.Log("damage");
             return damage;
+            Debug.Log("boom");
         }
     }
 }
