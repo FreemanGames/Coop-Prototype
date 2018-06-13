@@ -24,6 +24,8 @@ public class Shooting : MonoBehaviour
     //text to display the ammocount
     public Text ammoText;
     public Text clipText;
+    public Text weapon;
+    public string whichWeapon;
 
     // delay between gunshots
     public float timeBetweenBullets = 1.0f;
@@ -50,6 +52,7 @@ public class Shooting : MonoBehaviour
     {
         UpdateText();
         timer = Time.time;
+        weapon.text = whichWeapon.ToString();
         //baseFOV = Camera.main.fieldOfView;
         //cam = GetComponent<Camera>();
     }

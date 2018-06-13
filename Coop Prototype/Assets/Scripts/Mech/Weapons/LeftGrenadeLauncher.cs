@@ -22,9 +22,11 @@ public class LeftGrenadeLauncher : MonoBehaviour {
 	//text to display the ammocount
 	public Text ammoText;
 	public Text clipText;
+    public Text weapon;
+    public string whichWeapon;
 
-	// delay between gunshots
-	public float timeBetweenBullets = 1.0f;
+    // delay between gunshots
+    public float timeBetweenBullets = 1.0f;
 	private float timer;
 
 	//audioclips for the gun
@@ -40,8 +42,9 @@ public class LeftGrenadeLauncher : MonoBehaviour {
 	void Start(){
 		UpdateText ();
 		timer = Time.time;
+        weapon.text = whichWeapon.ToString();
 
-	}
+    }
 	void Awake () {
 		source = GetComponent<AudioSource> ();
 	}
