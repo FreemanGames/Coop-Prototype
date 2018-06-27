@@ -93,7 +93,8 @@ public class LeftGrenadeLauncher : MonoBehaviour {
 		}
 
 		// if the mouse button is presses and reloaded is true activate the firedelay timer and check the clipcount value
-		if (Input.GetMouseButtonDown (0) && reloaded == true) {
+		if (Input.GetButtonDown("X_1") && reloaded == true) {
+            Debug.Log("fireleft");
 			if (Time.time - timer > timeBetweenBullets){
 				timer = Time.time;
 				// if the player has ammunition fire and play the shootsound audio clip

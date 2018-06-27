@@ -119,7 +119,7 @@ public class AssaultRifle : MonoBehaviour {
                     clipCount--;
                     //will create the noisemaker oject that will attract enemies above where the player was when they fired and send out a raycast
                     UpdateText();
-                    GameObject Go = Instantiate(noise, noiseMaker.position, Quaternion.identity) as GameObject;
+                    //GameObject Go = Instantiate(noise, noiseMaker.position, Quaternion.identity) as GameObject;
 
                     RaycastHit hit;
                     // if the raycast hits a collider with the component EnemyHealth deal 1 damage to the health value

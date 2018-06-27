@@ -15,34 +15,49 @@ public class MechaMovement : MonoBehaviour {
 	public float backUpSpeed = -0.05f;
 	// second variable in the player turn speed
 	private float xRotate = 0.0f;
-
+    // reference to the Mech actor
+    public GameObject mech;
 
 	// Use this for initialization
 	void Start () {
 	}
 	// Update is called once per frame
 	void Update () {
-		// movement
-		if (Input.GetKey (KeyCode.W)) {
-			transform.position += transform.forward * speed;
+
+        //////////////
+        // MOVEMENT //
+        //////////////
+
+        // Movement (Keyboard)
+        if (Input.GetKey (KeyCode.W)) {
+            transform.position += transform.forward * speed;
 		}
 		if (Input.GetKey (KeyCode.S)) {
-			transform.position += transform.forward * backUpSpeed;
+            transform.position += transform.forward * backUpSpeed;
 		}
 		if (Input.GetKey (KeyCode.A)) {
-			transform.position += transform.right * -strafeSpeed;
+            transform.position += transform.right * -strafeSpeed;
 		}
 		if (Input.GetKey (KeyCode.D)) {
-			transform.position += transform.right * strafeSpeed;
+            transform.position += transform.right * strafeSpeed;
 		}
-		if (Input.GetKeyDown (KeyCode.Space) && grounded == true) {
-			gameObject.GetComponent<Rigidbody> ().AddForce (Vector3.up * 400);
-			grounded = false;
-		}
-		{
+        //if (Input.GetKeyDown (KeyCode.Space) && grounded == true) {
+        //gameObject.GetComponent<Rigidbody> ().AddForce (Vector3.up * 400);
+        //grounded = false;
+        //}
+
+
+        // MOVE (Joystick)
+
+        // forward/back
+        transform.position += transform.forward * speed * -Input.GetAxis("L_YAxis_1");
+        // left/right
+        transform.position += transform.right * speed * Input.GetAxis("L_XAxis_1");
+
+
+        {
 			//mouselook
-			xRotate += speedH * Input.GetAxis("Mouse X");
-			transform.eulerAngles = new Vector3(0.0f, xRotate, 0.0f);
+			
 
 			if (Input.GetKeyDown ("escape"))
 				Cursor.lockState = CursorLockMode.None;
